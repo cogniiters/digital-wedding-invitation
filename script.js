@@ -1,5 +1,5 @@
 // ====== EDIT YOUR WEDDING DETAILS HERE ======
-const WEDDING_DATE = new Date("2026-11-25T19:30:00+05:00");
+const WEDDING_DATE = new Date("2026-12-26T19:00:00+05:00");
 // =============================================
 
 // Smooth navigation
@@ -44,16 +44,16 @@ function resizeScratch(){
   canvas.height = Math.round(rect.height * ratio);
   ctx.setTransform(ratio,0,0,ratio,0,0);
 
-  // Cover
+  // Cover (soft pink)
   const w = rect.width, h = rect.height;
   const grad = ctx.createLinearGradient(0,0,w,h);
-  grad.addColorStop(0,"#9b887c");
-  grad.addColorStop(.5,"#c5afa2");
-  grad.addColorStop(1,"#8b7569");
+  grad.addColorStop(0,"#e8a9b8");
+  grad.addColorStop(.5,"#f4c6d0");
+  grad.addColorStop(1,"#d98fa3");
   ctx.fillStyle = grad;
   ctx.fillRect(0,0,w,h);
 
-  ctx.fillStyle = "rgba(255,255,255,.18)";
+  ctx.fillStyle = "rgba(255,255,255,.55)";
   ctx.font = "600 11px Montserrat";
   ctx.textAlign = "center";
   ctx.fillText("SCRATCH HERE",w/2,h/2);
@@ -93,7 +93,8 @@ canvas.addEventListener("pointermove",scratch);
 window.addEventListener("pointerup",()=>scratching=false);
 
 // RSVP: opens WhatsApp with the guest's response.
-// Replace this number with the host's WhatsApp number in international format.
+// IMPORTANT: Replace this number with the host's real WhatsApp number
+// in international format (no + or spaces), e.g. "923001234567".
 const WHATSAPP_NUMBER = "923001234567";
 
 document.getElementById("rsvpForm").addEventListener("submit", function(e){
