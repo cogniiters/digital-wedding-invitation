@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ead6c8" />
+  <title>Our Wedding Invitation</title>
+  <meta name="description" content="A beautiful digital wedding invitation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="music-control" id="musicControl" aria-label="Toggle music">♪</div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="floral floral-top">❦</div>
+      <p class="eyebrow">TOGETHER WITH THEIR FAMILIES</p>
+      <h1>Zaɪn <span>&</span> Nora</h1>
+      <p class="subtitle">request the pleasure of your company</p>
+      <p class="small-date">ON OUR SPECIAL DAY</p>
+      <button class="primary-btn" onclick="scrollToSection('welcome')">Open Invitation</button>
+      <div class="scroll-hint">↓ Scroll to explore</div>
+    </section>
+
+    <!-- WELCOME -->
+    <section id="welcome" class="section paper">
+      <div class="ornament">❧</div>
+      <p class="eyebrow">WELCOME</p>
+      <h2>Two hearts,<br>one beautiful beginning.</h2>
+      <p class="body-copy">
+        With grateful hearts and the blessings of our families,
+        we invite you to celebrate the beginning of our forever.
+      </p>
+      <div class="names-script">Zaɪn & Nora</div>
+      <p class="date-line">25 NOVEMBER 2026</p>
+    </section>
+
+    <!-- SCRATCH -->
+    <section class="section paper">
+      <p class="eyebrow">A LITTLE SURPRISE</p>
+      <h2>Scratch to Reveal</h2>
+      <p class="body-copy">Reveal the date of our special celebration.</p>
+
+      <div class="scratch-wrap">
+        <div class="scratch-result">
+          <div class="heart">♥</div>
+          <p>OUR WEDDING DAY</p>
+          <strong>25 NOVEMBER 2026</strong>
+          <span>Save the date</span>
+        </div>
+        <canvas id="scratchCanvas" width="500" height="300"></canvas>
+      </div>
+      <p class="scratch-help">Use your finger to scratch away the cover.</p>
+    </section>
+
+    <!-- MESSAGE -->
+    <section class="section paper">
+      <p class="eyebrow">OUR STORY</p>
+      <h2>A day filled with<br>love & blessings</h2>
+      <p class="body-copy">
+        We would be honoured to have you with us as we celebrate
+        love, family and a new chapter together.
+      </p>
+      <div class="divider">✦</div>
+      <p class="quote">“Where there is love, there is life.”</p>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="section dark-paper">
+      <p class="eyebrow">COUNTING DOWN</p>
+      <h2>Until we say<br>“I do”</h2>
+      <div class="countdown" id="countdown">
+        <div><strong id="days">00</strong><span>Days</span></div>
+        <div><strong id="hours">00</strong><span>Hours</span></div>
+        <div><strong id="minutes">00</strong><span>Minutes</span></div>
+        <div><strong id="seconds">00</strong><span>Seconds</span></div>
+      </div>
+    </section>
+
+    <!-- VENUE -->
+    <section class="section paper">
+      <p class="eyebrow">THE CELEBRATION</p>
+      <h2>Venue</h2>
+      <div class="venue-card">
+        <div class="venue-icon">⌖</div>
+        <h3>Grand Palace Hall</h3>
+        <p>City Center, Lahore</p>
+        <p class="muted">Saturday · 7:30 PM</p>
+        <a class="secondary-btn" href="https://www.google.com/maps" target="_blank" rel="noopener">View Location</a>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="section paper">
+      <p class="eyebrow">JOIN US</p>
+      <h2>Pre-Wedding<br>Events</h2>
+
+      <article class="event-card">
+        <div class="event-number">01</div>
+        <div>
+          <h3>Mehndi</h3>
+          <p>Tuesday · 7:30 PM</p>
+          <span>At our family residence</span>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <div class="event-number">02</div>
+        <div>
+          <h3>Nikah</h3>
+          <p>Thursday · 5:00 PM</p>
+          <span>Grand Palace Hall</span>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <div class="event-number">03</div>
+        <div>
+          <h3>Walima</h3>
+          <p>Saturday · 7:30 PM</p>
+          <span>Grand Palace Hall</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- RSVP -->
+    <section class="section paper" id="rsvp">
+      <p class="eyebrow">RSVP</p>
+      <h2>Will you<br>join us?</h2>
+      <p class="body-copy">Please leave us a little message.</p>
+
+      <form id="rsvpForm" class="rsvp-form">
+        <label>Your name
+          <input id="guestName" type="text" placeholder="Enter your name" required>
+        </label>
+
+        <label>Will you be attending?
+          <select id="attendance" required>
+            <option value="">Select one</option>
+            <option>Yes, with pleasure</option>
+            <option>Sorry, I can't attend</option>
+          </select>
+        </label>
+
+        <label>Your message
+          <textarea id="message" rows="4" placeholder="Write your wishes..."></textarea>
+        </label>
+
+        <button class="primary-btn" type="submit">Send RSVP</button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="section closing">
+      <div class="floral">❦</div>
+      <p class="eyebrow">WITH LOVE</p>
+      <h2>We can't wait<br>to celebrate with you.</h2>
+      <p class="names-script">Zaɪn & Nora</p>
+      <button class="secondary-btn light" onclick="scrollToSection('rsvp')">RSVP</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
